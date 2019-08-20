@@ -34,6 +34,7 @@ Architecture: any
 Depends: linux-@@PLATFORM@@,
          linux-tools-@@PLATFORM@@,
          zfs-modules-@@KVERS@@,
+         zfs-headers-@@KVERS@@,
          linux-image-@@KVERS@@,
          connstat-module-@@KVERS@@
 Description: Kernel packages consolidation for the Delphix Appliance.
