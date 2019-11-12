@@ -29,10 +29,10 @@ Standards-Version: 4.1.2
 # particular kernel version should not be included here.
 #
 Package: delphix-kernel-@@KVERS@@
-Provides: delphix-kernel-@@PLATFORM@@, delphix-kernel
+Provides: delphix-kernel-gcp, delphix-kernel
 Architecture: any
-Depends: linux-@@PLATFORM@@,
-         linux-tools-@@PLATFORM@@,
+Depends: linux-gcp,
+         linux-tools-gcp,
          zfs-modules-@@KVERS@@,
          zfs-headers-@@KVERS@@,
          linux-image-@@KVERS@@,
