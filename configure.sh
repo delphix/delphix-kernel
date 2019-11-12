@@ -33,5 +33,4 @@ if [[ -z "$PLATFORM" ]]; then
 	exit 1
 fi
 
-sed "s/@@KVERS@@/$KVERS/g; s/@@PLATFORM@@/$PLATFORM/g" \
-	debian/control.in >debian/control
+sed "s/@@KVERS@@/$KVERS/g" "debian/control.$PLATFORM.in" >debian/control

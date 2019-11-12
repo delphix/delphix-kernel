@@ -1,0 +1,42 @@
+#
+# Copyright 2018 Delphix
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+Source: delphix-kernel
+Section: metapackages
+Priority: optional
+Maintainer: Delphix Engineering <eng@delphix.com>
+Build-Depends: debhelper (>= 10), devscripts
+Standards-Version: 4.1.2
+
+#
+# The following meta-package consolidates all the kernel packages required
+# by the Delphix Appliance for a given platform. Note that delphix-kernel
+# only has dependencies on kernel modules and tools that are built for a
+# specific version of the kernel. Any tools that are not specific to a
+# particular kernel version should not be included here.
+#
+Package: delphix-kernel-@@KVERS@@
+Provides: delphix-kernel-aws, delphix-kernel
+Architecture: any
+Depends: linux-aws,
+         linux-tools-aws,
+         zfs-modules-@@KVERS@@,
+         zfs-headers-@@KVERS@@,
+         linux-image-@@KVERS@@,
+         connstat-module-@@KVERS@@
+Description: Kernel packages consolidation for the Delphix Appliance.
+  This package consolidates all the version-specific kernel modules and tools
+  required by the Delphix Appliance for a given platform.
