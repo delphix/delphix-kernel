@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2018 Delphix
+# Copyright 2020 Delphix
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ if [[ -z "$KVERS" ]]; then
 fi
 
 unset PLATFORM
-for platform in generic aws gcp azure kvm; do
+for platform in generic aws gcp azure oracle; do
 	if [[ "$KVERS" =~ .*${platform} ]]; then
 		PLATFORM="$platform"
 		break;
