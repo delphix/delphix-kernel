@@ -34,6 +34,7 @@ Architecture: any
 Depends: linux-azure,
          linux-tools-azure,
          zfs-modules-@@KVERS@@,
+         zfs-modules-@@KVERS@@-dbg,
          zfs-headers-@@KVERS@@,
          linux-image-@@KVERS@@,
          connstat-module-@@KVERS@@
