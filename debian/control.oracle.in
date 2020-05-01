@@ -31,12 +31,14 @@ Standards-Version: 4.1.2
 Package: delphix-kernel-@@KVERS@@
 Provides: delphix-kernel-oracle, delphix-kernel
 Architecture: any
-Depends: linux-oracle,
-         linux-tools-oracle,
+Depends: linux-image-@@KVERS@@,
+         linux-image-@@KVERS@@-dbgsym,
+         linux-modules-extra-@@KVERS@@,
+         linux-headers-@@KVERS@@,
+         linux-tools-@@KVERS@@,
          zfs-modules-@@KVERS@@,
          zfs-modules-@@KVERS@@-dbg,
          zfs-headers-@@KVERS@@,
-         linux-image-@@KVERS@@,
          connstat-module-@@KVERS@@
 Description: Kernel packages consolidation for the Delphix Appliance.
   This package consolidates all the version-specific kernel modules and tools
