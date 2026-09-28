@@ -32,7 +32,6 @@ Package: delphix-kernel-@@KVERS@@
 Provides: delphix-kernel-azure, delphix-kernel
 Architecture: any
 Depends: linux-image-@@KVERS@@,
-         linux-image-@@KVERS@@-dbgsym,
          linux-modules-extra-@@KVERS@@,
          linux-headers-@@KVERS@@,
          linux-tools-@@KVERS@@,

@@ -32,7 +32,6 @@ Package: delphix-kernel-@@KVERS@@
 Provides: delphix-kernel-generic, delphix-kernel
 Architecture: any
 Depends: linux-image-@@KVERS@@,
-         linux-image-@@KVERS@@-dbgsym,
          linux-headers-@@KVERS@@,
          linux-tools-@@KVERS@@,
          zfs-modules-@@KVERS@@,
